@@ -1,2 +1,4 @@
 # Markdown-enabled-static-web-server
-buptJava网络编程大作业
+bupt Java网络编程大作业
+
+支持Markdown的静态Web服务器
