@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MD Blog</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css\index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<a class="navbar-brand" href="/index.html" id="brand">MD Blog</a>
+<ul class="nav nav-tabs" id="page-header">
+    <li role="presentation"><a href="/index.html">文章</a></li>
+    <li role="presentation"><a href="/photos.html">照片</a></li>
+    <li role="presentation" class="active"><a href="/publish.html">发布</a></li>
+    <li role="presentation"><a href="/about.html">关于</a></li>
+</ul>
+<div class="outer">
+    <div style="margin-bottom: 20px;">
+        支持上传博文与图片，支持同时上传最多10个文件。<br/>
+        上传Markdown文件会自动转化为博文。<br/>
+        上传图片则会展示在照片页，支持jpg, jpeg, gif, png格式。<br/>
+    </div>
+    <input id="file-upload" type="file" class="file" data-preview-file-type="text">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/fileinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/locales/zh.js"></script>
+<script type="text/javascript">
+    $("#file-upload").fileinput({
+        language: "zh",
+        uploadUrl: '/upload',
+        uploadAsync: false,
+        showUpload: true,
+        maxFileCount: 10,
+        allowedFileExtensions: ['jpg', 'jpeg', 'gif', 'png', 'md'],
+        previewFileType:'any',
+    });
+    $("#file-upload").on("fileuploaded", function(event, data, previewId, index) {
+        var data = data.response;
+        console.log(data);
+    });
+</script>
+</body>
+</html>

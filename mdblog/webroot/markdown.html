@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown语法示例</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link href="css\green.css" type="text/css" rel="stylesheet" />
+    <link href="css\main.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div id="to-top" class="btn-group" role="group">
+    <button type="button" class="btn btn-default btn-lg" onclick="window.scrollTo(0,0);return false;">
+        <span class="glyphicon glyphicon-eject" aria-hidden="true"></span> 顶部
+    </button>
+    <button type="button" class="btn btn-default btn-lg">
+        <a href="/index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 主页</a>
+    </button>
+</div><h1>Mardown是什么?</h1>
+<p>Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。
+这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
+<p>由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。
+如GitHub、Reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge、简书等，甚至还能被用来撰写电子书。</p>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h4>四级标题</h4>
+<h5>五级标题</h5>
+<h6>六级标题</h6>
+<p>这是一段普通文字：</p>
+<p>予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯；朝晖夕阴，气象万千。此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？若夫霪雨霏霏，连月不开，阴风怒号，浊浪排空；日星隐曜，山岳潜形；商旅不行，樯倾楫摧；薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。至若春和景明，波澜不惊，上下天光，一碧万顷；沙鸥翔集，锦鳞游泳；岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。</p>
+<p>这是<strong>加粗</strong>，<em>斜体</em>，<del>删除线</del>，<a href="https://blog.imalan.cn">链接</a>。</p>
+<p>这是块引用与嵌套块引用：</p>
+<blockquote>
+<p>安得广厦千万间，大庇天下寒士俱欢颜！风雨不动安如山。</p>
+<blockquote>
+<p>呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！</p>
+</blockquote>
+</blockquote>
+<p>这是行内代码：<code>int a=1;</code>。这是代码块：</p>
+<pre><code class="language-c++">int main(int argc , char** argv){
+    std::cout &lt;&lt; &quot;Hello World!\n&quot;;
+    return 0;
+}
+</code></pre>
+<p>这是无序列表：</p>
+<ul>
+<li>苹果
+<ul>
+<li>红将军</li>
+<li>元帅</li>
+</ul>
+</li>
+<li>香蕉</li>
+<li>梨</li>
+</ul>
+<p>这是有序列表：</p>
+<ol>
+<li>打开冰箱
+<ol>
+<li>右手放在冰箱门拉手上</li>
+<li>左手扶住冰箱主体</li>
+<li>右手向后用力</li>
+</ol>
+</li>
+<li>把大象放进冰箱</li>
+<li>关上冰箱</li>
+</ol>
+<p>这是行内公式：$m\times n$，这是块级公式：</p>
+<p>$C_{m\times k}=A_{m\times n}\cdot B_{n\times k}$</p>
+<p>这是表格：</p>
+<table>
+<thead>
+<tr><th>第一格表头</th><th>第二格表头</th></tr>
+</thead>
+<tbody>
+<tr><td>内容单元格 第一列第一格</td><td>内容单元格第二列第一格</td></tr>
+<tr><td>内容单元格 第一列第二格 多加文字</td><td>内容单元格第二列第二格</td></tr>
+</tbody>
+</table>
+<p>水平分割线[^这是脚注]：</p>
+<hr />
+
+</body>
+</html>

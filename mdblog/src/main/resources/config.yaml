@@ -1,0 +1,5 @@
+host: "localhost"
+web: "webroot"
+blog: "blog"
+theme: "green"
+port: 80
